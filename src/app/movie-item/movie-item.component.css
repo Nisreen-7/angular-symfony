@@ -1,0 +1,12 @@
+article{
+  margin: 0 auto;
+  background-color: pink;
+  box-shadow: 5px 5px 10px gray;
+  width:500px;
+}
+h3{
+color:blueviolet;
+}
+p{
+  font-style:italic ;
+}
