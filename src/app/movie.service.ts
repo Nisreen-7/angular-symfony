@@ -12,4 +12,13 @@ export class MovieService {
   fetchAll() {
    return  this.http.get <Movie[]>('http://localhost:8000/api/movie')
   }
+
+  add(movie:Movie){
+    return this.http.post <Movie>('http://localhost:8000/api/movie', movie)
+
+  }
+
+  delete(id:number){
+    return this.http.delete<void>('http://localhost:8000/api/movie/' +id)
+  }
 }

@@ -8,13 +8,32 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  list:Movie[] = [];
+  list: Movie[] = [];
 
-  constructor(private service:MovieService){}
+  constructor(private service: MovieService) { }
 
   ngOnInit(): void {
     this.service.fetchAll()
-    .subscribe(data => this.list = data);
+      .subscribe(data => this.list = data);
 
   }
+  // toList(movie: Movie) {
+  //   this.list.push(movie)
+  // }
+
+  toList(movie: Movie) {
+    this.service.add(movie)
+      .subscribe(data => this.list.push(data));
+  }
+
+  // supprimer
+  removeMovie(movie: Movie) {
+    if (movie.id) {
+      this.service.delete(movie.id)
+        .subscribe(() => this.list = this.list.filter(item => item.id != movie.id));
+
+    }
+  }
 }
+
+

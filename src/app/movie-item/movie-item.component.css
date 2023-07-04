@@ -1,11 +1,11 @@
 article{
-  margin: 0 auto;
-  background-color: pink;
+  margin-left:20px ;
+  background-color: #FAF0E6;
   box-shadow: 5px 5px 10px gray;
   width:500px;
 }
 h3{
-color:blueviolet;
+color:rgb(17, 225, 100);
 }
 p{
   font-style:italic ;

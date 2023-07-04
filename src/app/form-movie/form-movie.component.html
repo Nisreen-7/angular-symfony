@@ -1,0 +1,30 @@
+<p>form-movie works!</p>
+<div class="container">
+  <form (ngSubmit)="handleSubmit()">
+    <div class="mb-3 row">
+      <label for="Title" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="title" [(ngModel)]="movie.title">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="resume" class="col-sm-2 col-form-label">Resume</label>
+      <div class="col-sm-10">
+        <textarea type="text" class="form-control" name="resume" [(ngModel)]="movie.resume"></textarea>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="released" class="col-sm-2 col-form-label">Released</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" name="released" [(ngModel)]="movie.released">
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="duration" class="col-sm-2 col-form-label">duration</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="duration" [(ngModel)]="movie.duration">
+      </div>
+    </div>
+    <button class="btn btn-info m-auto">Add</button>
+  </form>
+</div>
