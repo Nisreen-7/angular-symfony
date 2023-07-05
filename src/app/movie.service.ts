@@ -10,24 +10,24 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   fetchAll() {
-   return  this.http.get <Movie[]>('http://localhost:8000/api/movie')
+    return this.http.get<Movie[]>('http://localhost:8000/api/movie')
   }
 
-  add(movie:Movie){
-    return this.http.post <Movie>('http://localhost:8000/api/movie', movie)
+  add(movie: Movie) {
+    return this.http.post<Movie>('http://localhost:8000/api/movie', movie)
 
   }
 
-  delete(id:number){
-    return this.http.delete<void>('http://localhost:8000/api/movie/' +id)
+  delete(id: number) {
+    return this.http.delete<void>('http://localhost:8000/api/movie/' + id)
   }
 
-  fetchOne(id:any){
-    return this.http.get <Movie>('http://localhost:8000/api/movie/'+id)
+  fetchOne(id: any) {
+    return this.http.get<Movie>('http://localhost:8000/api/movie/' + id)
   }
 
-  update(movie:Movie){
-    return this.http.patch <Movie>('http://localhost:8000/api/movie' +movie.id, movie)
+  update(movie: Movie) {
+    return this.http.patch<Movie>('http://localhost:8000/api/movie/' + movie.id, movie)
 
   }
 }
