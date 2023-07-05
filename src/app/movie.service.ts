@@ -30,4 +30,8 @@ export class MovieService {
     return this.http.patch<Movie>('http://localhost:8000/api/movie/' + movie.id, movie)
 
   }
+  search(term: string) {
+    return this.http.get<Movie[]>('http://localhost:8000/api/movie/search/' + term)
+
+  }
 }

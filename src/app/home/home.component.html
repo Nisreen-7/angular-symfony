@@ -1,4 +1,5 @@
 <main class="container text-danger">
+ 
   <h2>Movie List</h2>
   <app-movie-item [movie]="item"  (delete)="removeMovie(item)" *ngFor="let item of list"  />
   <app-form-movie (added)="toList($event)"/>
