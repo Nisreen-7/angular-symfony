@@ -1,0 +1,18 @@
+<p>single-movie works!</p>
+<div *ngIf="movie">
+
+  <ng-container *ngIf="!editing">
+
+    <h1>{{movie.title}}</h1>
+    <p> {{movie.released|date}} </p>
+    <p>Duration: {{movie.duration}}</p>
+    <h3>resume</h3>
+    <p> {{movie.resume}} </p>
+    <button (click)="editing = true" class="btn btn-warning">Edit</button>
+
+  </ng-container >
+  <app-form-movie *ngIf="editing" [movie]="movie" (added)="updateMovie($event)" />
+</div>
+<div *ngIf="!movie">
+  Loading...
+</div>

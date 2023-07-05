@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from '../entities';
 import { MovieService } from '../movie.service';
 
@@ -10,7 +10,7 @@ import { MovieService } from '../movie.service';
 export class FormMovieComponent {
 
   constructor(private service: MovieService) { }
-
+ @Input()
   movie: Movie = { title: '', resume: '', released: '', duration: 0 };
 
 
@@ -25,5 +25,6 @@ export class FormMovieComponent {
     // modifier le code pour appler le servise par le parent
     this.added.emit(this.movie);
   }
+
 
 }

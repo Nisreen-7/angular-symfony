@@ -21,4 +21,13 @@ export class MovieService {
   delete(id:number){
     return this.http.delete<void>('http://localhost:8000/api/movie/' +id)
   }
+
+  fetchOne(id:any){
+    return this.http.get <Movie>('http://localhost:8000/api/movie/'+id)
+  }
+
+  update(movie:Movie){
+    return this.http.patch <Movie>('http://localhost:8000/api/movie' +movie.id, movie)
+
+  }
 }

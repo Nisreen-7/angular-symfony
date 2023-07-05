@@ -7,13 +7,14 @@ import { Movie } from '../entities';
   styleUrls: ['./movie-item.component.css']
 })
 export class MovieItemComponent {
-  @Input({ required: true })
-  movie: Movie;
 
 
   @Output()
   delete = new EventEmitter<Movie>();
 
+
+  @Input({ required: true })
+  movie: Movie;
   buttonPressed() {
     this.delete.emit(this.movie);
   }
