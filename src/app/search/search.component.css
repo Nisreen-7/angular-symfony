@@ -4,11 +4,12 @@
 }
 
 ul {
-  position: relative;
+  position:relative;
+  float: flex;
+  justify-content: right;
   background-color: white;
   border: 1px solid gray;
-  width: 50%;
-  margin: 0;
+  width: 20%;
+  margin-right: 5px;
   padding: 0;
-  offset-position: right;
 }
